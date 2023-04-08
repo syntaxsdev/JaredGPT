@@ -9,6 +9,8 @@
 *.scm~
 *.scm#*
 .#*.scm
+*.env
+*.code-workspace
 
 ## Build generated
 build/

@@ -1,4 +1,4 @@
 JaredEndpoint = http://localhost:3005/message
-LocalWebhookEngpoint = http://localhost:8000/messages
+LocalWebhookEngpoint = http://localhost:3003/messages
 API_KEY = sk-
 prompt=You are iGPT, a GPT model running on iMessage. You may use emojis in your response. Respond concisely as possible.

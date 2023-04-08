@@ -1,0 +1,23 @@
+{
+    "routes": {
+    },
+    "webhooks": [
+        {
+            "url": "http://127.0.0.1:3003/messages/",
+            "routes": [
+              {
+                "name": "/gpt",
+                "description": "Access GPT 3.5",
+                "parameterSyntax": "/gpt [message]",
+                "comparisons": {
+                  "startsWith": ["/gpt"]
+                }
+              }
+            ]
+          }
+    ],
+    "webServer": {
+        "port": 3005
+    }
+  }
+  

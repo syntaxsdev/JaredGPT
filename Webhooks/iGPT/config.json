@@ -1,23 +1,113 @@
 {
-    "routes": {
-    },
-    "webhooks": [
-        {
-            "url": "http://127.0.0.1:3003/messages/",
-            "routes": [
-              {
-                "name": "/gpt",
-                "description": "Access GPT 3.5",
-                "parameterSyntax": "/gpt [message]",
-                "comparisons": {
-                  "startsWith": ["/gpt"]
-                }
+  "routes": {
+  },
+  "webhooks": [
+      {
+          "url": "http://127.0.0.1:3003/messages/",
+          "routes": [
+            {
+              "name": "/gpt",
+              "description": "Access GPT 3.5",
+              "parameterSyntax": "/gpt [message]",
+              "comparisons": {
+                "startsWith": ["/gpt"]
               }
-            ]
-          }
-    ],
-    "webServer": {
-        "port": 3005
-    }
+            }
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:3003/messagesWithPrompt/",
+          "routes": [
+            {
+              "name": "/pgt",
+              "description": "Access GPT 3.5 with prompt",
+              "parameterSyntax": "/gpt [prompt] | [message]",
+              "comparisons": {
+                "startsWith": ["/pgt"]
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:3003/resetPrompt/",
+          "routes": [
+            {
+              "name": "/reset p",
+              "description": "Resets the GPT prompt",
+              "parameterSyntax": "/reset [prompt]",
+              "comparisons": {
+                "startsWith": ["/reset p"]
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:3003/setPrompt/",
+          "routes": [
+            {
+              "name": "/set p",
+              "description": "Sets the GPT prompt",
+              "parameterSyntax": "/reset [prompt]",
+              "comparisons": {
+                "startsWith": ["/set p"]
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:3003/getPrompt/",
+          "routes": [
+            {
+              "name": "/get p",
+              "description": "Get the current GPT prompt",
+              "parameterSyntax": "/get p",
+              "comparisons": {
+                "startsWith": ["/get p"]
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:3003/wping/",
+          "routes": [
+            {
+              "name": "/wping",
+              "description": "Determines if the backend hook is active",
+              "parameterSyntax": "/wping",
+              "comparisons": {
+                "startsWith": ["/wping"]
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:3003/clearHistory/",
+          "routes": [
+            {
+              "name": "/clear h",
+              "description": "Clears the stored history",
+              "parameterSyntax": "/clear h",
+              "comparisons": {
+                "startsWith": ["/clear h"]
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:3003/increaseHistoryCount/",
+          "routes": [
+            {
+              "name": "/increase h",
+              "description": "Increases the stored history size",
+              "parameterSyntax": "/increase h [count]",
+              "comparisons": {
+                "startsWith": ["/increase h"]
+              }
+            }
+          ]
+        }
+  ],
+  "webServer": {
+      "port": 3005
   }
-  
+}
